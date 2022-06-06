@@ -30,17 +30,8 @@
           >
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
-            <li
-            {% if 'hiking' in request.path %}
-              class="nav-item active mr-3"
-            {% else %}
-              class=class="nav-item mr-3"
-            {% endif %}
-          >
-            <a class="nav-link" href="{% url 'hiking' %}">Featured hiking</a>
-          </li>
-        </ul>
 
+          </ul>
         <ul class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
           <li class="nav-item mr-3">
@@ -50,6 +41,7 @@
                   </i> (dashboard)</a>
 
               </li>
+
           <li class="nav-item mr-3">
             <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
               <i class="fas fa-sign-out-alt"></i> Logout
